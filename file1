@@ -1,0 +1,25 @@
+import requests
+import urllib2
+
+#Check Url
+urls = raw_input("Please input your url: ")
+
+response = requests.get(urls, stream  = True)
+
+print (response)
+
+# Download web
+#if (response == 200):
+response = urllib2.urlopen(urls)
+webcontent = response.read()
+
+print (webcontent)
+
+# Write data to file
+
+file = ('test.hml','w')
+    #file_ = file.open()
+file = file.close()
+#else:
+#    print ("This web is not available")
+ #   return (response)
